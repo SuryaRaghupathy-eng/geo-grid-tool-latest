@@ -84,9 +84,16 @@ export default function GeoGridDashboard() {
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
                   <h3 className="font-semibold text-base">{p.name}</h3>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {p.location}
-                  </p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <p className="text-xs text-muted-foreground">
+                      {p.location}
+                    </p>
+                    {p.createdAt && (
+                      <span className="text-[10px] text-muted-foreground/60 bg-muted px-1.5 py-0.5 rounded">
+                        {new Date(p.createdAt).toLocaleDateString()}
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 <AlertDialog>
