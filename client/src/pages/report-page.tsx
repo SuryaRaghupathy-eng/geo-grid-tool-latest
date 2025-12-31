@@ -267,9 +267,9 @@ export default function ReportPage() {
           <p className="text-muted-foreground mb-4">
             Visit dashboard to view your report.
           </p>
-          <Button onClick={() => navigate("/")} data-testid="button-back-to-map">
+          <Button onClick={() => navigate("/")} data-testid="button-back-to-dashboard">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Map
+            Back to Dashboard
           </Button>
         </Card>
       </div>
