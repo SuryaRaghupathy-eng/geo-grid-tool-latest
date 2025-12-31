@@ -1,0 +1,93 @@
+Add an empty state section to the /geo-grid-dashboard page to handle first-time users with no projects.
+
+Environment:
+
+TypeScript + React
+
+Wouter for routing
+
+Shadcn UI components
+
+Requirements:
+
+Modify geo-grid-dashboard.tsx
+
+Add the empty state below the existing header
+
+Do NOT add backend logic
+
+Do NOT add persistence
+
+Do NOT modify /analyze
+
+The empty state must include:
+
+A title: No projects yet
+
+A short description encouraging project creation
+
+A Create Campaign button that navigates to /analyze
+
+Use the following implementation:
+
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+
+export default function GeoGridDashboard() {
+  return (
+    <div className="p-6 max-w-6xl mx-auto">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-2xl font-semibold">Projects</h1>
+          <p className="text-sm text-muted-foreground">
+            Manage your Geo Grid campaigns
+          </p>
+        </div>
+
+        <Link href="/analyze">
+          <Button className="gap-2">
+            + New Project
+          </Button>
+        </Link>
+      </div>
+
+      {/* Empty State */}
+      <div className="border rounded-lg p-12 flex flex-col items-center justify-center text-center">
+        <h2 className="text-lg font-medium mb-2">
+          No projects yet
+        </h2>
+
+        <p className="text-sm text-muted-foreground mb-6 max-w-md">
+          Create your first Geo Grid campaign to start tracking local rankings.
+        </p>
+
+        <Link href="/analyze">
+          <Button variant="default">
+            Create Campaign
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+
+Do not add any conditional logic yet.
+The empty state should always be visible for now.
+
+✅ EXPECTED RESULT (VERIFY)
+
+/geo-grid-dashboard shows:
+
+Projects header
+
+Subtitle
+
++ New Project button (top-right)
+
+Empty state card below
+
+Clicking Create Campaign or + New Project opens /analyze
+
+No backend or wizard changes

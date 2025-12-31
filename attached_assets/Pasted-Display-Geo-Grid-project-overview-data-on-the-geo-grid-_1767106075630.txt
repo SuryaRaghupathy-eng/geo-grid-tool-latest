@@ -1,0 +1,103 @@
+Display Geo Grid project overview data on the /geo-grid-dashboard page.
+
+Environment:
+- React + TypeScript
+- Wouter routing
+- Existing backend endpoint: GET /api/geo-grid/projects
+- Project objects now include:
+  lastRunAt
+  lastSummary (avgRank, found, totalPoints, etc.)
+
+Constraints:
+- Do NOT modify backend
+- Do NOT change /analyze wizard
+- UI changes only on geo-grid-dashboard.tsx
+
+Steps:
+
+1. Open client/src/pages/geo-grid-dashboard.tsx
+
+2. Import React hooks if not already present:
+
+import { useEffect, useState } from "react";
+
+3. Add state for projects at the top of the component:
+
+const [projects, setProjects] = useState<any[]>([]);
+
+4. Fetch projects when the dashboard loads:
+
+useEffect(() => {
+  fetch("/api/geo-grid/projects")
+    .then(res => res.json())
+    .then(setProjects)
+    .catch(() => setProjects([]));
+}, []);
+
+5. Replace the empty state rendering with conditional logic:
+
+- If projects.length === 0 → show existing empty state
+- If projects.length > 0 → render project overview cards
+
+6. Use the following JSX to render each project card:
+
+{projects.map((p) => (
+  <div key={p.id} className="border rounded-lg p-4 mb-4">
+    <h3 className="font-medium text-lg">{p.name}</h3>
+
+    <p className="text-sm text-muted-foreground">
+      {p.keyword} · {p.location}
+    </p>
+
+    <p className="text-sm text-muted-foreground">
+      {p.website}
+    </p>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-sm">
+      <div>
+        <div className="text-muted-foreground">Avg Rank</div>
+        <div className="font-medium">
+          {p.lastSummary?.avgRank ?? "—"}
+        </div>
+      </div>
+
+      <div>
+        <div className="text-muted-foreground">Found</div>
+        <div className="font-medium">
+          {p.lastSummary
+            ? `${p.lastSummary.found}/${p.lastSummary.totalPoints}`
+            : "—"}
+        </div>
+      </div>
+
+      <div>
+        <div className="text-muted-foreground">Grid</div>
+        <div className="font-medium">
+          {p.grid?.size}, {p.grid?.spacing}
+        </div>
+      </div>
+
+      <div>
+        <div className="text-muted-foreground">Last Run</div>
+        <div className="font-medium">
+          {p.lastRunAt
+            ? new Date(p.lastRunAt).toLocaleString()
+            : "Not run yet"}
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+
+Expected Result:
+- Dashboard lists projects instead of empty state
+- Each project shows:
+  name
+  keyword
+  website
+  location
+  grid details
+  avg rank
+  found / total points
+  last run time
+- Refreshing the page preserves data
