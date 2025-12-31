@@ -1,75 +1,7 @@
 {
   "dev-user": [
     {
-      "id": "5c16816c-f6df-44f0-ba42-c903ee161f8a",
-      "name": "estate agents in Islington - Islington",
-      "keyword": "estate agents in Islington",
-      "location": "Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom",
-      "website": "https://www.ellisandco.co.uk/",
-      "grid": {
-        "size": "3x3",
-        "spacing": "2000m"
-      },
-      "selectedLocation": {
-        "lat": 51.5384287,
-        "lng": -0.0999051,
-        "address": "Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom"
-      },
-      "gridConfig": {
-        "enabled": true,
-        "distanceUnit": "meters",
-        "gridSize": 3,
-        "spacing": 2000
-      },
-      "selectedPointIds": [
-        "-1_-1",
-        "-1_0",
-        "-1_1",
-        "0_-1",
-        "0_0",
-        "0_1",
-        "1_-1",
-        "1_0",
-        "1_1"
-      ],
-      "createdAt": "2025-12-31T10:56:52.385Z"
-    },
-    {
-      "id": "b3a6880d-acff-4831-b51c-25f66dbec440",
-      "name": "estate agents in Royston - Royston",
-      "keyword": "estate agents in Royston",
-      "location": "Royston, North Hertfordshire, Hertfordshire, England, United Kingdom",
-      "website": "https://www.country-properties.co.uk",
-      "grid": {
-        "size": "3x3",
-        "spacing": "5mi"
-      },
-      "selectedLocation": {
-        "lat": 52.0472741,
-        "lng": -0.0246467,
-        "address": "Royston, North Hertfordshire, Hertfordshire, England, United Kingdom"
-      },
-      "gridConfig": {
-        "enabled": true,
-        "distanceUnit": "miles",
-        "gridSize": 3,
-        "spacing": 5
-      },
-      "selectedPointIds": [
-        "-1_-1",
-        "-1_0",
-        "-1_1",
-        "0_-1",
-        "0_0",
-        "0_1",
-        "1_-1",
-        "1_0",
-        "1_1"
-      ],
-      "createdAt": "2025-12-31T11:11:57.843Z"
-    },
-    {
-      "id": "2963e552-659b-4d9e-88a4-bab92584704e",
+      "id": "c2a4e06d-17c8-4fbd-9203-a40684e8624c",
       "name": "estate agents in Crewe - Crewe",
       "keyword": "estate agents in Crewe",
       "location": "Crewe, Cheshire East, England, United Kingdom",
@@ -116,41 +48,7 @@
         "2_1",
         "2_2"
       ],
-      "createdAt": "2025-12-31T11:17:41.098Z"
-    },
-    {
-      "id": "c10f8bee-684c-4350-a118-5045dd99b0ba",
-      "name": "estate agents in Islington - Islington",
-      "keyword": "estate agents in Islington",
-      "location": "Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom",
-      "website": "https://www.martinco.com/",
-      "grid": {
-        "size": "3x3",
-        "spacing": "1mi"
-      },
-      "selectedLocation": {
-        "lat": 51.5384287,
-        "lng": -0.0999051,
-        "address": "Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom"
-      },
-      "gridConfig": {
-        "enabled": true,
-        "distanceUnit": "miles",
-        "gridSize": 3,
-        "spacing": 1
-      },
-      "selectedPointIds": [
-        "-1_-1",
-        "-1_0",
-        "-1_1",
-        "0_-1",
-        "0_0",
-        "0_1",
-        "1_-1",
-        "1_0",
-        "1_1"
-      ],
-      "createdAt": "2025-12-31T11:41:54.907Z"
+      "createdAt": "2025-12-31T11:46:21.071Z"
     }
   ]
 }
