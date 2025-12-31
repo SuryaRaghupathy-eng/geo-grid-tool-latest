@@ -93,16 +93,7 @@ export default function GeoGridDashboard() {
                     {p.website}
                   </p>
 
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-sm">
-                    <div>
-                      <div className="text-muted-foreground">Found</div>
-                      <div className="font-medium">
-                        {p.lastSummary
-                          ? `${p.lastSummary.found}/${p.lastSummary.totalPoints}`
-                          : "—"}
-                      </div>
-                    </div>
-
+                  <div className="mt-4 text-sm">
                     <div>
                       <div className="text-muted-foreground">Grid</div>
                       <div className="font-medium">
