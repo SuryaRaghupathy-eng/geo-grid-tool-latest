@@ -1,1 +1,54 @@
-{}
+{
+  "dev-user": [
+    {
+      "id": "ef705acd-0884-449b-a8a7-b65ede6916ee",
+      "name": "estate agents in Tunbridge Wells - Tunbridge Wells",
+      "keyword": "estate agents in Tunbridge Wells",
+      "location": "Tunbridge Wells, Kent, England, United Kingdom",
+      "website": "https://www.martinco.com/",
+      "grid": {
+        "size": "5x5",
+        "spacing": "2mi"
+      },
+      "selectedLocation": {
+        "lat": 51.1025381,
+        "lng": 0.4764214,
+        "address": "Tunbridge Wells, Kent, England, United Kingdom"
+      },
+      "gridConfig": {
+        "enabled": true,
+        "distanceUnit": "miles",
+        "gridSize": 5,
+        "spacing": 2
+      },
+      "selectedPointIds": [
+        "-2_-2",
+        "-2_-1",
+        "-2_0",
+        "-2_1",
+        "-2_2",
+        "-1_-2",
+        "-1_-1",
+        "-1_0",
+        "-1_1",
+        "-1_2",
+        "0_-2",
+        "0_-1",
+        "0_0",
+        "0_1",
+        "0_2",
+        "1_-2",
+        "1_-1",
+        "1_0",
+        "1_1",
+        "1_2",
+        "2_-2",
+        "2_-1",
+        "2_0",
+        "2_1",
+        "2_2"
+      ],
+      "createdAt": "2025-12-31T10:35:02.345Z"
+    }
+  ]
+}

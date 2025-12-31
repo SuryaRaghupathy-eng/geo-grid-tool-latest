@@ -483,16 +483,6 @@ export default function ReportPage() {
             <div className="px-4 py-4 flex-shrink-0 border-b">
               <div className="container mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  <Card className="p-4">
-                    <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
-                      <TrendingUp className="w-4 h-4" />
-                      Avg Rank
-                    </div>
-                    <p className={`font-bold text-2xl ${getRankTextColor(searchResults.summary.avgRank)}`} data-testid="text-avg-rank">
-                      {searchResults.summary.avgRank || "N/A"}
-                    </p>
-                  </Card>
-
                 <Card className="p-4">
                   <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
                     <FileText className="w-4 h-4" />
@@ -698,7 +688,7 @@ export default function ReportPage() {
                           </h4>
                           <div>
                             <p className="font-medium">{selectedPoint.matchedPlace.title}</p>
-                            <p className="text-sm text-muted-foreground">{selectedPoint.matchedPlace.address}</p>
+                            <p className="text-sm">{selectedPoint.matchedPlace.address}</p>
                           </div>
                           {selectedPoint.matchedPlace.rating && (
                             <div className="flex items-center gap-2">
@@ -717,7 +707,7 @@ export default function ReportPage() {
                               className="flex items-center gap-2 text-primary hover:underline text-sm"
                             >
                               <Globe className="w-4 h-4" />
-                              Visit Website
+                              <span className="font-bold">{selectedPoint.matchedPlace.website}</span>
                             </a>
                           )}
                           {selectedPoint.matchedPlace.phoneNumber && (
@@ -834,7 +824,7 @@ export default function ReportPage() {
                             </h4>
                             <div>
                               <p className="font-medium">{selectedPoint.matchedPlace.title}</p>
-                              <p className="text-sm text-muted-foreground">{selectedPoint.matchedPlace.address}</p>
+                              <p className="text-sm">{selectedPoint.matchedPlace.address}</p>
                             </div>
                             {selectedPoint.matchedPlace.rating && (
                               <div className="flex items-center gap-2">
@@ -853,7 +843,7 @@ export default function ReportPage() {
                                 className="flex items-center gap-2 text-primary hover:underline text-sm"
                               >
                                 <Globe className="w-4 h-4" />
-                                Visit Website
+                                <span className="font-bold">{selectedPoint.matchedPlace.website}</span>
                               </a>
                             )}
                             {selectedPoint.matchedPlace.phoneNumber && (

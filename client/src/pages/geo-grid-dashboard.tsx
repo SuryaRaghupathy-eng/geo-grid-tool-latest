@@ -95,13 +95,6 @@ export default function GeoGridDashboard() {
 
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-sm">
                     <div>
-                      <div className="text-muted-foreground">Avg Rank</div>
-                      <div className="font-medium">
-                        {p.lastSummary?.avgRank ?? "—"}
-                      </div>
-                    </div>
-
-                    <div>
                       <div className="text-muted-foreground">Found</div>
                       <div className="font-medium">
                         {p.lastSummary
@@ -114,15 +107,6 @@ export default function GeoGridDashboard() {
                       <div className="text-muted-foreground">Grid</div>
                       <div className="font-medium">
                         {p.grid?.size}, {p.grid?.spacing}
-                      </div>
-                    </div>
-
-                    <div>
-                      <div className="text-muted-foreground">Last Run</div>
-                      <div className="font-medium">
-                        {p.lastRunAt
-                          ? new Date(p.lastRunAt).toLocaleString()
-                          : "Not run yet"}
                       </div>
                     </div>
                   </div>
