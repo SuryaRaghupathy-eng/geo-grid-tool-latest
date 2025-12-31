@@ -140,7 +140,7 @@ export default function GeoGridDashboard() {
                     </div>
                   </div>
                   <Link href={`/report/${p.id}`}>
-                    <Button variant="default" size="sm" className="gap-2" data-testid={`button-view-report-${p.id}`}>
+                    <Button variant="default" size="default" className="gap-2 px-6 shadow-md hover:shadow-lg transition-all" data-testid={`button-view-report-${p.id}`}>
                       <BarChart3 className="w-4 h-4" />
                       View Report
                     </Button>
