@@ -532,9 +532,9 @@ export default function ReportPage() {
                     11-20 position
                   </div>
                   <p className="font-bold text-2xl text-orange-600 dark:text-orange-400" data-testid="text-top20">
-                    {searchResults.summary.top20Percent}%
+                    {(searchResults.summary.top20Percent - searchResults.summary.top10Percent).toFixed(1)}%
                   </p>
-                  <p className="text-xs text-muted-foreground">{searchResults.summary.top20Count} points</p>
+                  <p className="text-xs text-muted-foreground">{searchResults.summary.top20Count - searchResults.summary.top10Count} points</p>
                 </Card>
 
                 <Card className="p-4 bg-red-50 dark:bg-red-950">
