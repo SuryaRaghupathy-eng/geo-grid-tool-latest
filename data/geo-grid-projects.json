@@ -157,6 +157,40 @@
         "1_1"
       ],
       "createdAt": "2025-12-31T10:56:52.385Z"
+    },
+    {
+      "id": "8f103ff3-b504-463b-bf26-37f0d08e1951",
+      "name": "estate agents in Royston - Royston",
+      "keyword": "estate agents in Royston",
+      "location": "Royston, North Hertfordshire, Hertfordshire, England, United Kingdom",
+      "website": "https://www.country-properties.co.uk/",
+      "grid": {
+        "size": "3x3",
+        "spacing": "10mi"
+      },
+      "selectedLocation": {
+        "lat": 52.0472741,
+        "lng": -0.0246467,
+        "address": "Royston, North Hertfordshire, Hertfordshire, England, United Kingdom"
+      },
+      "gridConfig": {
+        "enabled": true,
+        "distanceUnit": "miles",
+        "gridSize": 3,
+        "spacing": 10
+      },
+      "selectedPointIds": [
+        "-1_-1",
+        "-1_0",
+        "-1_1",
+        "0_-1",
+        "0_0",
+        "0_1",
+        "1_-1",
+        "1_0",
+        "1_1"
+      ],
+      "createdAt": "2025-12-31T11:01:35.017Z"
     }
   ]
 }

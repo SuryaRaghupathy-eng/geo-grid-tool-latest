@@ -488,13 +488,13 @@ export default function ReportPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <Card className="p-4">
                   <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
-                    <FileText className="w-4 h-4" />
-                    Keyword Count
+                    <TrendingUp className="w-4 h-4" />
+                    Avg Ranking
                   </div>
-                  <p className="font-bold text-2xl text-blue-600 dark:text-blue-400" data-testid="text-keyword-count">
-                    1
+                  <p className="font-bold text-2xl text-blue-600 dark:text-blue-400" data-testid="text-avg-ranking">
+                    {searchResults.summary.avgRank !== null ? searchResults.summary.avgRank.toFixed(1) : "—"}
                   </p>
-                  <p className="text-xs text-muted-foreground">keyword searched</p>
+                  <p className="text-xs text-muted-foreground">average position</p>
                 </Card>
 
                 <Card className="p-4">
