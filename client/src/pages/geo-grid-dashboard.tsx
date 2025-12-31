@@ -93,16 +93,13 @@ export default function GeoGridDashboard() {
                     {p.website}
                   </p>
 
-                  <div className="mt-4 text-sm">
-                    <div>
+                  <div className="mt-4 flex items-center justify-between">
+                    <div className="text-sm">
                       <div className="text-muted-foreground">Grid</div>
                       <div className="font-medium">
                         {p.grid?.size}, {p.grid?.spacing}
                       </div>
                     </div>
-                  </div>
-
-                  <div className="mt-4 flex gap-2">
                     <Link href={`/report/${p.id}`}>
                       <Button variant="default" size="sm" className="gap-2" data-testid={`button-view-report-${p.id}`}>
                         <BarChart3 className="w-4 h-4" />
