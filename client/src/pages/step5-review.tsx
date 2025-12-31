@@ -181,11 +181,7 @@ export default function Step5Review() {
     setSelectedPointIds(new Set());
   };
 
-<<<<<<< HEAD
   const handleCreateCampaign = async () => {
-=======
-  const handleCreateCampaign = () => {
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
     if (selectedPointIds.size === 0) {
       toast({
         title: "No points selected",
@@ -229,7 +225,6 @@ export default function Step5Review() {
     };
     sessionStorage.setItem("reportData", JSON.stringify(reportData));
 
-<<<<<<< HEAD
     try {
       const response = await fetch("/api/geo-grid/projects/sync", {
         method: "POST",
@@ -243,13 +238,6 @@ export default function Step5Review() {
     } catch (error) {
       console.error("Error syncing project:", error);
     }
-=======
-    fetch("/api/geo-grid/projects/sync", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(campaignData)
-    });
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
 
     setLocation("/report");
   };

@@ -1,10 +1,6 @@
 import express, { type Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
-<<<<<<< HEAD
 import { updateProject, deleteProject } from "./lib/geoGridProjects";
-=======
-import { updateProject } from "./lib/geoGridProjects";
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
 import { storage } from "./storage";
 import { coordinateSchema, insertFavoriteSchema } from "@shared/schema";
 import path from "path";
@@ -718,7 +714,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-<<<<<<< HEAD
   app.get("/api/geo-grid/projects/:id", async (req, res) => {
     try {
       const user = (req as any).session.user || { userId: 'dev-user' };
@@ -762,8 +757,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-=======
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
   const httpServer = createServer(app);
 
   return httpServer;

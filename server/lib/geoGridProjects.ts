@@ -34,7 +34,6 @@ export function updateProject(
   data[userId] = projects;
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
-<<<<<<< HEAD
 
 export function deleteProject(
   userId: string,
@@ -53,5 +52,3 @@ export function deleteProject(
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
   return true;
 }
-=======
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538

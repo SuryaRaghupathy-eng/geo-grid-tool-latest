@@ -126,10 +126,7 @@ function MapBoundsUpdater({ results }: { results: GridSearchResult[] }) {
 }
 
 export default function ReportPage() {
-<<<<<<< HEAD
   const [pathname] = useLocation();
-=======
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
   const [, navigate] = useLocation();
   const { toast } = useToast();
   const [selectedPoint, setSelectedPoint] = useState<GridSearchResult | null>(null);
@@ -137,53 +134,11 @@ export default function ReportPage() {
   const [isSearching, setIsSearching] = useState(false);
   const [hasStartedSearch, setHasStartedSearch] = useState(false);
   const [viewMode, setViewMode] = useState<"map" | "grid">("map");
-<<<<<<< HEAD
   const [projectData, setProjectData] = useState<any>(null);
   const [loadingProject, setLoadingProject] = useState(false);
   
-  // Extract projectId from URL
   const projectId = pathname.includes("/report/") ? pathname.split("/report/")[1] : null;
   
-  // Load project data from server if projectId exists
-  useEffect(() => {
-    if (projectId) {
-      setLoadingProject(true);
-      fetch(`/api/geo-grid/projects/${projectId}`)
-        .then(res => {
-          if (!res.ok) throw new Error("Failed to load project");
-          return res.json();
-        })
-        .then(project => {
-          setProjectData(project);
-          // Reconstruct reportData from project
-          const reportDataFromProject: ReportData = {
-            keyword: project.keyword,
-            websiteFilter: project.website,
-            gridPoints: project.gridConfig ? calculateGridPointsFromProject(project) : [],
-            centerLocation: project.selectedLocation,
-            gridConfig: project.gridConfig,
-            createdAt: project.createdAt,
-          };
-          sessionStorage.setItem("reportData", JSON.stringify(reportDataFromProject));
-        })
-        .catch((error) => {
-          console.error("Error loading project:", error);
-          toast({
-            variant: "destructive",
-            title: "Error Loading Project",
-            description: "Failed to load project data",
-          });
-        })
-        .finally(() => setLoadingProject(false));
-    }
-  }, [projectId, toast]);
-=======
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
-  
-  const storedData = sessionStorage.getItem("reportData");
-  const reportData: ReportData | null = storedData ? JSON.parse(storedData) : null;
-
-<<<<<<< HEAD
   const calculateGridPointsFromProject = (project: any): GridPoint[] => {
     if (!project.selectedLocation || !project.gridConfig) return [];
     
@@ -213,8 +168,41 @@ export default function ReportPage() {
     return points;
   };
 
-=======
->>>>>>> c6cbdde7dfbc6c422c8b8ca5d386a896f9fab538
+  useEffect(() => {
+    if (projectId) {
+      setLoadingProject(true);
+      fetch(`/api/geo-grid/projects/${projectId}`)
+        .then(res => {
+          if (!res.ok) throw new Error("Failed to load project");
+          return res.json();
+        })
+        .then(project => {
+          setProjectData(project);
+          const reportDataFromProject: ReportData = {
+            keyword: project.keyword,
+            websiteFilter: project.website,
+            gridPoints: project.gridConfig ? calculateGridPointsFromProject(project) : [],
+            centerLocation: project.selectedLocation,
+            gridConfig: project.gridConfig,
+            createdAt: project.createdAt,
+          };
+          sessionStorage.setItem("reportData", JSON.stringify(reportDataFromProject));
+        })
+        .catch((error) => {
+          console.error("Error loading project:", error);
+          toast({
+            variant: "destructive",
+            title: "Error Loading Project",
+            description: "Failed to load project data",
+          });
+        })
+        .finally(() => setLoadingProject(false));
+    }
+  }, [projectId, toast]);
+  
+  const storedData = sessionStorage.getItem("reportData");
+  const reportData: ReportData | null = storedData ? JSON.parse(storedData) : null;
+
   const gridSearchMutation = useMutation({
     mutationFn: async (data: { gridPoints: any[]; keyword: string; targetWebsite: string }) => {
       console.log("Starting grid search with:", data);
