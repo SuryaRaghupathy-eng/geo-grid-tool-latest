@@ -86,7 +86,7 @@ export default function GeoGridDashboard() {
                   <h3 className="font-medium text-lg">{p.name}</h3>
 
                   <p className="text-sm text-muted-foreground">
-                    {p.keyword} · {p.location}
+                    {p.location}
                   </p>
 
                   <p className="text-sm text-muted-foreground">
