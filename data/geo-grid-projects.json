@@ -49,6 +49,114 @@
         "2_2"
       ],
       "createdAt": "2025-12-31T10:35:02.345Z"
+    },
+    {
+      "id": "09409bb9-fdd0-44dd-8570-3387d3e13047",
+      "name": "estate agents in doncaster - Doncaster",
+      "keyword": "estate agents in doncaster",
+      "location": "Doncaster, South Yorkshire, England, United Kingdom",
+      "website": "whitegates.co.uk/",
+      "grid": {
+        "size": "7x7",
+        "spacing": "5mi"
+      },
+      "selectedLocation": {
+        "lat": 53.5227681,
+        "lng": -1.1335312,
+        "address": "Doncaster, South Yorkshire, England, United Kingdom"
+      },
+      "gridConfig": {
+        "enabled": true,
+        "distanceUnit": "miles",
+        "gridSize": 7,
+        "spacing": 5
+      },
+      "selectedPointIds": [
+        "-3_-3",
+        "-3_-2",
+        "-3_-1",
+        "-3_0",
+        "-3_1",
+        "-3_2",
+        "-3_3",
+        "-2_-3",
+        "-2_-2",
+        "-2_-1",
+        "-2_0",
+        "-2_1",
+        "-2_2",
+        "-2_3",
+        "-1_-3",
+        "-1_-2",
+        "-1_-1",
+        "-1_0",
+        "-1_1",
+        "-1_2",
+        "-1_3",
+        "0_-3",
+        "0_-2",
+        "0_-1",
+        "0_0",
+        "0_1",
+        "0_2",
+        "0_3",
+        "1_-3",
+        "1_-2",
+        "1_-1",
+        "1_0",
+        "1_1",
+        "1_2",
+        "1_3",
+        "2_-3",
+        "2_-2",
+        "2_-1",
+        "2_0",
+        "2_1",
+        "2_2",
+        "2_3",
+        "3_-3",
+        "3_-2",
+        "3_-1",
+        "3_0",
+        "3_1",
+        "3_2",
+        "3_3"
+      ],
+      "createdAt": "2025-12-31T10:52:07.863Z"
+    },
+    {
+      "id": "5c16816c-f6df-44f0-ba42-c903ee161f8a",
+      "name": "estate agents in Islington - Islington",
+      "keyword": "estate agents in Islington",
+      "location": "Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom",
+      "website": "https://www.ellisandco.co.uk/",
+      "grid": {
+        "size": "3x3",
+        "spacing": "2000m"
+      },
+      "selectedLocation": {
+        "lat": 51.5384287,
+        "lng": -0.0999051,
+        "address": "Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom"
+      },
+      "gridConfig": {
+        "enabled": true,
+        "distanceUnit": "meters",
+        "gridSize": 3,
+        "spacing": 2000
+      },
+      "selectedPointIds": [
+        "-1_-1",
+        "-1_0",
+        "-1_1",
+        "0_-1",
+        "0_0",
+        "0_1",
+        "1_-1",
+        "1_0",
+        "1_1"
+      ],
+      "createdAt": "2025-12-31T10:56:52.385Z"
     }
   ]
 }

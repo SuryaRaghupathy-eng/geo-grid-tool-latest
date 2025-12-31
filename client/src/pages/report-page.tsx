@@ -136,6 +136,7 @@ export default function ReportPage() {
   const [viewMode, setViewMode] = useState<"map" | "grid">("map");
   const [projectData, setProjectData] = useState<any>(null);
   const [loadingProject, setLoadingProject] = useState(false);
+  const [reportData, setReportData] = useState<ReportData | null>(null);
   
   const projectId = pathname.includes("/report/") ? pathname.split("/report/")[1] : null;
   
@@ -171,6 +172,10 @@ export default function ReportPage() {
   useEffect(() => {
     if (projectId) {
       setLoadingProject(true);
+      setSearchResults(null);
+      setHasStartedSearch(false);
+      setSelectedPoint(null);
+      
       fetch(`/api/geo-grid/projects/${projectId}`)
         .then(res => {
           if (!res.ok) throw new Error("Failed to load project");
@@ -186,6 +191,7 @@ export default function ReportPage() {
             gridConfig: project.gridConfig,
             createdAt: project.createdAt,
           };
+          setReportData(reportDataFromProject);
           sessionStorage.setItem("reportData", JSON.stringify(reportDataFromProject));
         })
         .catch((error) => {
@@ -199,9 +205,6 @@ export default function ReportPage() {
         .finally(() => setLoadingProject(false));
     }
   }, [projectId, toast]);
-  
-  const storedData = sessionStorage.getItem("reportData");
-  const reportData: ReportData | null = storedData ? JSON.parse(storedData) : null;
 
   const gridSearchMutation = useMutation({
     mutationFn: async (data: { gridPoints: any[]; keyword: string; targetWebsite: string }) => {
