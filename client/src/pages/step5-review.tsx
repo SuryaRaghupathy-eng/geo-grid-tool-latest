@@ -239,11 +239,6 @@ export default function Step5Review() {
       console.error("Error syncing project:", error);
     }
 
-    toast({
-      title: "Campaign Created Successfully",
-      description: "Visit the dashboard to view your report and analyze rankings.",
-    });
-
     setLocation("/report");
   };
 

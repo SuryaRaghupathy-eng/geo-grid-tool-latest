@@ -263,9 +263,9 @@ export default function ReportPage() {
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <Card className="p-8 text-center max-w-md">
           <FileText className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
-          <h2 className="text-xl font-semibold mb-2">No Report Data</h2>
+          <h2 className="text-xl font-semibold mb-2">Campaign Created Successfully</h2>
           <p className="text-muted-foreground mb-4">
-            Please create a report from the map page first.
+            Visit dashboard to view your report.
           </p>
           <Button onClick={() => navigate("/")} data-testid="button-back-to-map">
             <ArrowLeft className="w-4 h-4 mr-2" />
