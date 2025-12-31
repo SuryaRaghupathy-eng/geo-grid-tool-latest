@@ -80,33 +80,13 @@ export default function GeoGridDashboard() {
       ) : (
         <div>
           {projects.map((p) => (
-            <div key={p.id} className="border rounded-lg p-4 mb-4 bg-card">
-              <div className="flex items-start justify-between">
+            <div key={p.id} className="border rounded-lg p-5 mb-4 bg-card">
+              <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
-                  <h3 className="font-medium text-lg">{p.name}</h3>
-
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold text-base">{p.name}</h3>
+                  <p className="text-xs text-muted-foreground mt-1">
                     {p.location}
                   </p>
-
-                  <p className="text-sm text-muted-foreground">
-                    {p.website}
-                  </p>
-
-                  <div className="mt-4 flex items-center justify-between">
-                    <div className="text-sm">
-                      <div className="text-muted-foreground">Grid</div>
-                      <div className="font-medium">
-                        {p.grid?.size}, {p.grid?.spacing}
-                      </div>
-                    </div>
-                    <Link href={`/report/${p.id}`}>
-                      <Button variant="default" size="sm" className="gap-2" data-testid={`button-view-report-${p.id}`}>
-                        <BarChart3 className="w-4 h-4" />
-                        View Report
-                      </Button>
-                    </Link>
-                  </div>
                 </div>
 
                 <AlertDialog>
@@ -114,7 +94,7 @@ export default function GeoGridDashboard() {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="ml-4 flex-shrink-0"
+                      className="ml-4 flex-shrink-0 h-8 w-8"
                       data-testid={`button-delete-project-${p.id}`}
                     >
                       <Trash2 className="w-4 h-4" />
@@ -139,6 +119,26 @@ export default function GeoGridDashboard() {
                     </div>
                   </AlertDialogContent>
                 </AlertDialog>
+              </div>
+
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-xs text-muted-foreground truncate">
+                  {p.website}
+                </p>
+                <div className="flex items-center gap-3 flex-shrink-0">
+                  <div className="text-right">
+                    <div className="text-xs text-muted-foreground">Grid</div>
+                    <div className="text-xs font-medium">
+                      {p.grid?.size}, {p.grid?.spacing}
+                    </div>
+                  </div>
+                  <Link href={`/report/${p.id}`}>
+                    <Button variant="default" size="sm" className="gap-2" data-testid={`button-view-report-${p.id}`}>
+                      <BarChart3 className="w-4 h-4" />
+                      View Report
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
